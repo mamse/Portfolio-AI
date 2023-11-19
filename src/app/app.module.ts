@@ -14,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 import {FormsModule} from '@angular/forms';
 import {NgOptimizedImage} from '@angular/common';
+import {InputNumberModule} from 'primeng/inputnumber';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import {NgOptimizedImage} from '@angular/common';
     AppRoutingModule,
     FormsModule,
     NgOptimizedImage,
+    InputNumberModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

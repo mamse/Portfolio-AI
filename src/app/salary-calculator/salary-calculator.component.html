@@ -2,9 +2,10 @@
 <div class="container">
   <h1>Have you ever wondered how much time it would take to afford various purchases on your current salary?</h1>
   <h2>Enter Monthly Salary:</h2>
-  <input type="number" id="monthlySalary" [(ngModel)]="monthlySalary" />
-  <button (click)="calculateTimes()">Calculate</button>
-
+  <p-inputNumber [(ngModel)]="monthlySalary" [showButtons]="true" mode="currency" currency="USD"></p-inputNumber>
+  <div>
+    <p-button (click)="calculateTimes()" label="Calculate"></p-button>
+  </div>
   <ng-container *ngIf="monthlySalary >= 0">
     <div *ngIf="yachtTime !== undefined">
       <h2>Yacht</h2>
