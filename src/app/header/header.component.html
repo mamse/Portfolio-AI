@@ -1,11 +1,15 @@
 <mat-toolbar color="primary" style="background: #11181a  ;box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 ">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
   <span>ARTIFICIAL INTELLIGENCE</span>
   <span class="example-spacer"></span>
   <span class="example-spacer"></span>
   <span class="example-spacer"></span>
-  <span style="margin-left: auto;">About</span>
+  <div class="navbar">
+    <button routerLink="/news">
+    <span class="navbar-item">News</span>
+    </button>
+    <button routerLink="/about">
+    <span class="navbar-item no-style">About</span>
+    </button>
+</div>
 </mat-toolbar>
