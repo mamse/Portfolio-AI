@@ -1,24 +1,27 @@
-<div class="backgorund">
 <div class="container">
   <h1>Have you ever wondered how much time it would take to afford various purchases on your current salary?</h1>
   <h2>Enter Monthly Salary:</h2>
-  <p-inputNumber [(ngModel)]="monthlySalary" [showButtons]="true" mode="currency" currency="USD"></p-inputNumber>
-  <div>
-    <p-button (click)="calculateTimes()" label="Calculate"></p-button>
-  </div>
-  <ng-container *ngIf="monthlySalary >= 0">
-    <div *ngIf="yachtTime !== undefined">
-      <h2>Yacht</h2>
-    <img src="assets/yacht.jpg" alt="Yacht Image" height="300" width="450" />
+  <p-inputNumber [(ngModel)]="monthlySalary" [showButtons]="true" mode="currency" currency="USD" (ngModelChange)="calculateTimes()"></p-inputNumber>
+  <div *ngIf="monthlySalary > 0">
+    <div>
+      <h2>IPHONE</h2>
+      <img src="assets/images/iphone.jpg" alt="Iphone Image" height="auto" width="70%" />
+      <p>It takes {{ iphoneTime }} to afford an Iphone</p>
+    </div>
+    <div>
+      <h2>FERRARI</h2>
+      <img src="assets/images/ferrari.jpg" alt="Ferrari Image" height="auto" width="70%" />
+      <p>It takes {{ ferrariTime }} to afford a Ferrari</p>
+    </div>
+    <div>
+      <h2>YACHT</h2>
+      <img src="assets/images/yacht.jpg" alt="Yacht Image" height="auto" width="70%" />
       <p>It takes {{ yachtTime }} to afford a yacht</p>
     </div>
-    <div *ngIf="islandTime !== undefined">
-      <h2>Island</h2>
-      <img src="assets/island.jpg" alt="Yacht Image" height="300" width="450" />
+    <div>
+      <h2>ISLAND</h2>
+      <img src="assets/images/island.jpg" alt="Island Image" height="auto" width="70%" />
       <p>It takes {{ islandTime }} to afford an island</p>
     </div>
-  </ng-container>
+  </div>
 </div>
-</div>
-
-
