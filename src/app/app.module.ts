@@ -9,8 +9,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { AboutComponent } from './about/about.component';
-import { NewsComponent } from './news/news.component';
+import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
+import {FormsModule} from '@angular/forms';
+import {NgOptimizedImage} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { AppRoutingModule } from './app-routing.module';
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    NewsComponent
+    ContactComponent,
+    SalaryCalculatorComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgOptimizedImage,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,23 @@
+<div class="backgorund">
+<div class="container">
+  <h1>Have you ever wondered how much time it would take to afford various purchases on your current salary?</h1>
+  <h2>Enter Monthly Salary:</h2>
+  <input type="number" id="monthlySalary" [(ngModel)]="monthlySalary" />
+  <button (click)="calculateTimes()">Calculate</button>
+
+  <ng-container *ngIf="monthlySalary >= 0">
+    <div *ngIf="yachtTime !== undefined">
+      <h2>Yacht</h2>
+    <img src="assets/yacht.jpg" alt="Yacht Image" height="300" width="450" />
+      <p>It takes {{ yachtTime }} to afford a yacht</p>
+    </div>
+    <div *ngIf="islandTime !== undefined">
+      <h2>Island</h2>
+      <img src="assets/island.jpg" alt="Yacht Image" height="300" width="450" />
+      <p>It takes {{ islandTime }} to afford an island</p>
+    </div>
+  </ng-container>
+</div>
+</div>
+
+
